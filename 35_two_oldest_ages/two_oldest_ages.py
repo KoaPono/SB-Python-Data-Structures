@@ -21,3 +21,7 @@ def two_oldest_ages(ages):
     # you may find it helpful to research the `sorted(iter)` function, which
     # can take *any* type of list-like-thing, and returns a new, sorted list
     # from it.
+
+    ages_set = set(ages)
+    reverse_sorted_ages = sorted(ages_set, reverse=True)
+    return (reverse_sorted_ages[1], reverse_sorted_ages[0])

@@ -19,3 +19,9 @@ def find_greater_numbers(nums):
         >>> find_greater_numbers([])
         0
     """
+    total = 0
+    for idx, num in enumerate(nums):
+        for val in nums[idx:]:
+            if num < val:
+                total += 1
+    return total
